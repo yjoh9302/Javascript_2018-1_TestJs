@@ -6,13 +6,34 @@
     This is a test
   <script>
 
-    function Constructor() {}
-    let myFun = Constructor;
-    console.log(myFun.prototype);
-    console.log(myFun._proto_);
-    let myObj = new Constructor();//Constructor는 반드시 함수여야함
-    console.log(myObj.prototype); // x
-    console.log(myObj._proto_);
+    function Human () {
+      this.a = 'test';
+    }
+    Human.prototype.name = '정통';//Human이라는 함수를 이용하여 
+    Human.prototype.gender = '남자/여자'
+    function Korean () {
+
+    }
+    Korean.prototype = new Human();
+    Korean.prototype.name = '정통2';
+    function Daejeon() {
+      
+    }
+    Daejeon.prototype = new Korean();
+    let human = new Human();
+    let korean = new Korean();
+    let daejeon = new Daejeon();
+    console.log(human.name);
+    console.log(korean.name);
+    console.log(daejeon.name)
+
+    // function Constructor() {}
+    // let myFun = Constructor;
+    // console.log(myFun.prototype);
+    // console.log(myFun._proto_);
+    // let myObj = new Constructor();//Constructor는 반드시 함수여야함
+    // console.log(myObj.prototype); // x
+    // console.log(myObj._proto_);
      
   </script>
 </body>

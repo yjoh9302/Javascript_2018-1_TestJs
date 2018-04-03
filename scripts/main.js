@@ -11,8 +11,7 @@ var id = localStorage.getItem('id');
 var headding = document.querySelector('h1');
 headding.innerHTML = id +'Homepage'
 
-var loginBtn = document.querySelector('button');
-loginBtn.onclick = function() {
+document.querySelector('button').onclick = function() {
     
     var repassword = prompt(localStorage.getItem('id') + '의 비밀번호');
 
