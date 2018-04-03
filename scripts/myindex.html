@@ -10,7 +10,7 @@
     let myFun = Constructor;
     console.log(myFun.prototype);
     console.log(myFun._proto_);
-    let myObj = new Constructor();
+    let myObj = new Constructor();//Constructor는 반드시 함수여야함
     console.log(myObj.prototype); // x
     console.log(myObj._proto_);
      
