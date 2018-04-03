@@ -12,8 +12,15 @@
     myObj.a=3;
     myObj.b=20;
     myObj.c=30;
-    console.log(myObj.a);
-    console.log(myObj['a']);
+    delete myObj.c;
+    for (key in myObj){
+      document.write('key' +key+ '=>' +myObj[key] + '<br>')
+    }
+    //const {PI} = Math;//객체
+    const PI = Math.PI;
+    console.log(PI)
+    /*console.log(myObj.a);
+    console.log(myObj['a']);*/
 
      
   </script>
